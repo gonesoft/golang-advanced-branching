@@ -23,8 +23,12 @@ type bike struct {
 }
 
 // Values array for the feedback.json file
+type Values struct {
+	Models []Model `json:"values"`
+}
+
+// Model array for the feedback.json file
 type Model struct {
-	Models   []Model  `json:"values"`
 	Name     string   `json:"model"`
 	Feedback []string `json:"feedback"`
 }
@@ -38,8 +42,6 @@ type feedbackResult struct {
 
 var vehicleResult map[string]feedbackResult
 var inventory []vehicle
-
-// Model array for the feedback.json file
 
 type rating float32
 
